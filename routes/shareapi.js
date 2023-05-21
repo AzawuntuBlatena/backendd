@@ -1,0 +1,11 @@
+const express=require('express');
+const router=express.Router();
+const {getShare,createShare,updateShare,deleteShare, getShareById}=require('../controllers/shareInfo');
+const {protect,isAdmin}=require('../middleware/authMiddelware');
+const upload = require('../middleware/upload');
+router.get('/',getShare);
+router.get('/edit_shareholder/:id',getShareById);
+router.post('/',createShare);
+router.put('/:email',updateShare);
+router.delete('/:id',deleteShare);
+module.exports=router;

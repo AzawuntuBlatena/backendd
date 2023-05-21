@@ -1,0 +1,8 @@
+MONGO_URL= "mongodb://localhost:27017/sssss"
+NODE_ENV = development
+PORT = 0022
+JWT_SECRET =yours
+USER='email'
+PASS='password'
+HOST=smtp.gmail.com
+SERVICE=gmail

@@ -1,0 +1,12 @@
+const express=require('express');
+const router=express.Router();
+const {protect}=require('../middleware/authMiddelware');
+const upload = require('../middleware/upload');
+const { getNewBuyer, createNew, getBuyerById } = require('../controllers/newBuyer');
+router.get('/',getNewBuyer);
+router.get('/shareholder_registration/:id',getBuyerById);
+// router.get('/edit_shareholder/:id',getShareById);
+router.post('/',createNew);
+// router.put('/:id',updateShare);
+// router.delete('/:id',deleteShare);
+module.exports=router;
